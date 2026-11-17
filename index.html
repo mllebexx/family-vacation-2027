@@ -29,6 +29,31 @@ header {
     box-shadow: 0 3px 12px rgba(0,0,0,.06);
 }
 
+/* Main container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+/* Page heading */
+.page-header {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.page-header h1 {
+    color: #159E9A;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    color: #64748B;
+    font-size: 16px;
+}
+
 .logo {
     font-size: 25px;
     font-weight: bold;
@@ -176,7 +201,7 @@ section {
 }
 
 .itinerary {
-    max-width: 750px;
+    max-width: 500px;
     margin: auto;
 }
 
@@ -222,6 +247,93 @@ footer {
     padding: 30px;
 }
 
+/* Card layout */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Card headings */
+.link-card h2 {
+    color: #159E9A;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+/* Individual cards */
+.link-card {
+    background-color: #FFFFFF;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #E8F0EF;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Icon styling */
+.icon-container {
+    width: 48px;
+    height: 48px;
+    background-color: #E4F4F1;
+    color: #159E9A;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+}
+
+.icon-container svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Card descriptions */
+.link-card p {
+    color: #64748B;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.card-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: #159E9A;
+    color: #FFFFFF;
+
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+
+    padding: 13px 18px;
+    border-radius: 9px;
+
+    transition: background-color 0.2s ease;
+}
+
+.card-button:hover {
+    background-color: #117E7B;
+}
+
+.card-button svg {
+    width: 18px;
+    height: 18px;
+}
+
 @media(max-width: 650px) {
     header {
         flex-direction: column;
@@ -236,6 +348,26 @@ footer {
     section {
         padding: 45px 6%;
     }
+    .container {
+        padding: 40px 20px;
+    }
+
+    .page-header {
+        margin-bottom: 35px;
+    }
+
+    .page-header h1 {
+        font-size: 29px;
+    }
+
+    .links-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .link-card {
+        padding: 25px;
+    }
 }
 </style>
 </head>
@@ -243,12 +375,12 @@ footer {
 <body>
 
 <header>
-    <div class="logo">🌴 Family Adventures</div>
+    <div class="logo">Family Adventures</div>
     <nav>
         <a href="#about">About</a>
         <a href="#destinations">Explore</a>
-        <a href="#itinerary">Itinerary</a>
-        <a href="#packing">Packing</a>
+        <a href="#accomodations">Accomodations</a>
+        <a href="#availability">Availability</a>
     </nav>
 </header>
 
@@ -261,7 +393,7 @@ footer {
 </section>
 
 <section id="about">
-    <h2 class="section-title">☀️ The Adventure Begins!</h2>
+    <h2 class="section-title">The Adventure Begins!</h2>
     <div class="intro">
         <p>
             Welcome to our family vacation page! We're getting ready
@@ -278,7 +410,8 @@ footer {
 </section>
 
 <section class="countdown">
-    <h2>🎉 Countdown to Vacation!</h2>
+  
+    <h2>Countdown to Vacation!</h2>
     <div class="timer">
         <div><strong id="days">00</strong>Days</div>
         <div><strong id="hours">00</strong>Hours</div>
@@ -288,7 +421,7 @@ footer {
 </section>
 
 <section id="destinations">
-    <h2 class="section-title">📍 Vacation Highlights</h2>
+    <h2 class="section-title">Vacation Highlights</h2>
 
     <div class="grid">
         <div class="card">
@@ -316,68 +449,82 @@ footer {
         </div>
 
         <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaPEfbpimXzudwYaw4ge7g22C1DNtYpzN3lOKx5eFU5A&s=10" alt="Family nature getaway">
+            <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaPEfbpimXzudwYaw4ge7g22C1DNtYpzN3lOKx5eFU5A&s=10" alt="Family nature getaway"> -->
+            <img src="./lakeactivities.jpg" alt="Family nature getaway">
             <div class="card-content">
-                <h3>📸 Memory Making</h3>
+                <h3>Lake Activities</h3>
                 <p>The Finger Lakes are perfect for family-friendly lake adventures! With 11 beautiful glacial lakes, families can enjoy everything from swimming and boating to fishing, paddleboarding, and relaxing beach days.</p>
             </div>
         </div> 
     </div>
 </section>
+<section >
+    <div class="page-header">
+        <h2 class="section-title">Vacation Highlights</h2>
+        <p>Everything you need to plan and coordinate</p>
+    </div>
+    <div class="links-grid">
+    <!-- Accommodation Card -->
+    <div class="link-card">
+        <div class="icon-container">
+            <i data-lucide="house"></i>
+        </div>
 
-<section id="itinerary">
+        <h2>Potential Accommodations</h2>
+
+        <p>Explore Airbnb options for your stay.</p>
+
+        <a href="https://www.airbnb.com/wishlists/invite/d8660c49-421e-41db-a74e-eeff87a4538a?s=67&unique_share_id=237f466e-450b-4b79-995b-ecbaba8bf6a2" target="_blank" class="card-button">
+            View Airbnb Options
+            <i data-lucide="arrow-right"></i>
+        </a>
+    </div>
+
+    <!-- Availability Card -->
+    <div class="link-card">
+        <div class="icon-container">
+            <i data-lucide="calendar-check"></i>
+        </div>
+
+        <h2>Availability Form</h2>
+
+        <p>Keep track of everyone's availability.</p>
+
+        <a href="https://forms.gle/iJZrJAuHzX1cyAsQ8" target="_blank" class="card-button">
+            Open Form
+            <i data-lucide="arrow-right"></i>
+        </a>
+    </div>
+</div>
+</section>
+<!-- <h2 class="section-title">Links</h2>
+
+<div style="display: flex;">
+<section id="accomodations" >
+
     <h2 class="section-title">Potential Accommodations</h2>
 
-    <div class="itinerary">
+    <div class="itinerary" >
         <div class="day">
             <h3>AirBnb Options</h3>
             <a href="https://www.airbnb.com/wishlists/invite/d8660c49-421e-41db-a74e-eeff87a4538a?s=67&unique_share_id=237f466e-450b-4b79-995b-ecbaba8bf6a2">
                 Link to Airbnb
             </a>
         </div>
-        <!-- <div class="day">
-            <h3>Option1</h3>
-            <p>Travel, check into our hotel, unpack, and enjoy dinner together.</p>
-        </div>
-
-        <div class="day">
-            <h3>Option2</h3>
-            <p>Spend the day swimming, relaxing, and enjoying the sunshine.</p>
-        </div>
-
-        <div class="day">
-            <h3>Option3</h3>
-            <p>Visit local attractions, explore the area, and enjoy an adventure.</p>
-        </div>
-
-        <div class="day">
-            <h3>Option4</h3>
-            <p>Enjoy exciting activities, shopping, and a special family dinner.</p>
-        </div>
-
-        <div class="day">
-            <h3>Option5</h3>
-            <p>One last breakfast, pack our bags, and head home with amazing memories.</p>
-        </div>
-    </div> -->
-</section>
-
-<!-- <section id="packing">
-    <h2 class="section-title">🧳 Family Packing Checklist</h2>
-
-    <div class="checklist">
-        <label><input type="checkbox"> Clothes and outfits</label>
-        <label><input type="checkbox"> Swimsuits and beach towels</label>
-        <label><input type="checkbox"> Sunscreen and sunglasses</label>
-        <label><input type="checkbox"> Toothbrushes and toiletries</label>
-        <label><input type="checkbox"> Phone chargers</label>
-        <label><input type="checkbox"> Travel documents</label>
-        <label><input type="checkbox"> Snacks and drinks</label>
-        <label><input type="checkbox"> Cameras</label>
-        <label><input type="checkbox"> Games and entertainment</label>
-        <label><input type="checkbox"> Comfortable shoes</label>
     </div>
 </section> -->
+<!-- 
+<section id="availability">
+    <h2 class="section-title">Availability Form</h2>
+
+    <div class="itinerary">
+        <div class="day">
+            <h3>Lets keep track of everyone's availability!</h3>
+            <a href="https://forms.gle/iJZrJAuHzX1cyAsQ8">Link to Form</a>
+        </div>
+    </div>
+</section>
+</div> -->
 
 <footer>
     <h3>❤️ Family, Fun & Forever Memories</h3>
@@ -385,7 +532,9 @@ footer {
     <p>© 2026 Family Adventures</p>
 </footer>
 
+<script src="https://unpkg.com/lucide@latest"></script>
 <script>
+
 // CHANGE THIS DATE TO YOUR VACATION START DATE
 const vacationDate = new Date("2027-07-10T00:00:00").getTime();
 
@@ -415,6 +564,8 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+lucide.createIcons();
 </script>
 
 </body>
