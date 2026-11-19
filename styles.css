@@ -350,6 +350,7 @@ a {
     width: 300px;  /* Final scaled width (800 * 0.5) */
     height: 185px; /* Final scaled height (600 * 0.5) */
     overflow: hidden;
+    margin: auto;
   }
 
   .iframe-wrapper iframe {
