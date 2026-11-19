@@ -75,7 +75,7 @@ nav a:hover {
     min-height: 500px;
     background:
     linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.35)),
-    url('https://vinepair.com/wp-content/uploads/2018/08/FingerLakes_Header.jpg');
+    url('./Images/FingerLakes_Header.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -252,6 +252,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    max-width: 100%;
 }
 
 /* Card headings */
@@ -338,6 +339,20 @@ a {
   text-decoration: none;
   color: #159b94;
 }
+ 
+.iframe-wrapper {
+    width: 300px;  /* Final scaled width (800 * 0.5) */
+    height: 185px; /* Final scaled height (600 * 0.5) */
+    overflow: hidden;
+  }
+
+  .iframe-wrapper iframe {
+    width: 600px;  /* Original native width of the content */
+    height: 371px; /* Original native height of the content */
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    border: 0;
+  }
 
 @media(max-width: 650px) {
     header {
@@ -506,7 +521,9 @@ a {
         </a>
     </div>
     <div class="link-card">
-        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQfXzXoorqMYsX215RjBvY428gVkZ3lauhFhGlulQisiKimwD9xjH5LPTVgOyzrfisRylYUd4V9azBv/pubchart?oid=1821406875&amp;format=interactive"></iframe>
+        <div class="iframe-wrapper">
+            <iframe seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQfXzXoorqMYsX215RjBvY428gVkZ3lauhFhGlulQisiKimwD9xjH5LPTVgOyzrfisRylYUd4V9azBv/pubchart?oid=1821406875&amp;format=interactive"></iframe>
+        </div>
     </div>
 </div>
 <div>
